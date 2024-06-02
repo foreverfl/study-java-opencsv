@@ -16,6 +16,11 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    // 명시적으로 implementation configuration 추가
+    implementation
+}
+
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
