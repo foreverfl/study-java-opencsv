@@ -82,7 +82,7 @@
 - `ICSVWriter`: csv 작성기 클래스의 모든 동작을 정의함.
 - `ResultSetHelper`: `ResultSetHelperService`의 인터페이스.
 
-### 클래스 요약:
+### 클래스 요약
 
 - `AbstractCSVParser`: 파서 간의 중복 코드를 통합함.
 - `AbstractCSVWriter`: `CSVWriter`와 `CSVParserWriter` 클래스 간의 코드 중복을 방지함.
@@ -117,7 +117,7 @@
 - `ComplexFieldMapEntry<I,K extends Comparable<K>,T>`: CSV 파일의 열과 빈 필드 간의 다대일 매핑에 필요한 기본 기능을 정의합니다.
 - `CsvConverter`: 이 인터페이스를 구현하는 클래스는 읽을 때 `String`에서 어떤 유형으로의 변환과 쓸 때 어떤 유형에서 `String`으로의 변환을 수행함.
 - `CsvToBeanFilter`: 필터를 사용하면 빈이 생성되기 전에 입력 라인을 무시할 수 있음.
-- `FieldMap<I,K extends Comparable<K>,C extends ComplexFieldMapEntry<I,K,T>,T>`: 필드 식별자와 연결된 `BeanField` 간의 매핑에 대한 기본 특성을 정의함.
+- `FieldMap<I,K extends Comparable<K>,C extends ComplexFieldMapEntry<I,K,T>,T>`: 필드 식별자와 연결된 빈 필드 간의 매핑에 대한 기본 특성을 정의함.
 - `MappingStrategy<T>`: CSV 파일의 열을 실제 객체로 변환하는 작업을 처리하는 클래스의 인터페이스.
 
 ### 클래스 요약
@@ -140,7 +140,7 @@
 - `ConverterEnum`: 이 클래스는 입력을 열거형 유형으로 변환하고 그 반대로도 변환함.
 - `ConverterNumber`: 이 변환기 클래스는 `CsvNumber`와 함께 사용되며, 숫자 입력과 출력을 서식화해야 할 때 사용됨.
 - `ConverterPrimitiveTypes`: 이 클래스는 기본 유형의 변환을 처리하고 "필수" 플래그를 추가하기 위해 리플렉션 API의 필드를 래핑함.
-- `ConverterUUID`: 이 클래스는 String을 UUID 인스턴스로 변환함.
+- `ConverterUUID`: 이 클래스는 `String`을 UUID 인스턴스로 변환함.
 - `CsvToBean<T>`: CSV 데이터를 객체로 변환함.
 - `CsvToBeanBuilder<T>`: 이 클래스를 사용하면 CSV 소스에서 빈 목록으로 읽기 위한 모든 중간 단계와 클래스를 우회할 수 있음.
 - `FieldAccess<T>`: 클래스의 멤버 변수에 액세스하기 위한 로직을 캡슐화함.
@@ -286,7 +286,7 @@
 
 ### 클래스 요약
 
-- `OpencsvUtils`: 이 클래스는 opencsv의 내부 처리에 유용한 범용 정적 메서드 모음이 되도록 의도되었dma.
+- `OpencsvUtils`: 이 클래스는 opencsv의 내부 처리에 유용한 범용 정적 메서드 모음이 되도록 의도되었음.
 - `OrderedObject<E>`: 객체를 정렬하기 위한 간단한 클래스.
 
 ### [예제 코드](https://github.com/foreverfl/study-java-opencsv/blob/main/app/src/main/java/study/java/opencsv/bean/util/UtilExample.java)
@@ -315,7 +315,7 @@
 
 ### Enum 요약
 
-- `CSVReaderNullFieldIndicator`: CSVParser에게 무엇을 null로 간주할지 알려주는 데 사용되는 열거형.
+- `CSVReaderNullFieldIndicator`: CSVParser에게 무엇을 `null`로 간주할지 알려주는 데 사용되는 열거형.
 
 ### [예제 코드](https://github.com/foreverfl/study-java-opencsv/blob/main/app/src/main/java/study/java/opencsv/enums/EnumsExample.java)
 
@@ -329,7 +329,8 @@
 
 - `CsvBadConverterException`: 이 예외는 변환기가 어떤 식으로든 예상대로 동작하지 않았음을 나타냄.
 - `CsvBeanIntrospectionException`: 이 예외는 opencsv에 제공된 빈의 내부 검사 중에 문제가 발생했을 때 발생함.
-- `CsvChainedException`: 여러 예외를 수집하기 위한 예외 클래스입니다.CsvConstraintViolationException이 예외는 가져온 데이터에 의해 데이터 필드 간의 논리적 연결이 위반될 때 발생함.
+- `CsvChainedException`: 여러 예외를 수집하기 위한 예외 클래스.
+- `CsvConstraintViolationException`이 예외는 가져온 데이터에 의해 데이터 필드 간의 논리적 연결이 위반될 때 발생함.
 - `CsvDataTypeMismatchException`: 이 예외는 변환을 위해 제공된 문자열 값을 대상 필드의 필수 유형으로 변환할 수 없을 때 발생해야 함.
 - `CsvException`: 이것은 opencsv의 모든 예외에 대한 기본 클래스.
 - `CsvFieldAssignmentException`: 단일 필드를 디코딩하고 할당하는 동안 발생할 수 있는 확인된 예외의 상위 클래스.
@@ -346,7 +347,7 @@
 
 ### 인터페이스 요약
 
-- `RowProcessor`: `CSVReader`에 의해 읽혀진 String 배열이 검증되기 전에 처리하는 프로세서를 위한 인터페이스.
+- `RowProcessor`: `CSVReader`에 의해 읽혀진 `String` 배열이 검증되기 전에 처리하는 프로세서를 위한 인터페이스.
 
 ### [예제 코드](https://github.com/foreverfl/study-java-opencsv/tree/main/app/src/main/java/study/java/opencsv/processor)
 
@@ -358,7 +359,7 @@
 
 ### 클래스 요약
 
-- `LineReader`: 이 클래스는 캐리지 리턴이 제거되는 문제 #106을 위해 생성되었음.
+- `LineReader`: 이 클래스는 캐리지 리턴이 제거되는 문제 [#106](https://sourceforge.net/p/opencsv/bugs/106/)을 위해 생성되었음.
 
 ### [예제 코드](https://github.com/foreverfl/study-java-opencsv/tree/main/app/src/main/java/study/java/opencsv/processor)
 

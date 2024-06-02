@@ -27,6 +27,7 @@ public class BeanExample {
             for (Bean bean : beans) {
                 System.out.println(bean);
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
